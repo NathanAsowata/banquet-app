@@ -1,7 +1,10 @@
+import NavBar from "../components/NavBar"
 
 const Home= () => {
   return (
-    <div>Banquet App</div>
+    <>
+      <NavBar />
+    </>
   )
 }
 

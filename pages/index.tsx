@@ -1,13 +1,13 @@
-import Carousel from "../components/Carousel"
 import RecipeCard from "../components/RecipeCard"
 import SearchBar from "../components/SearchBar"
+import TrendingRecipes from "../components/TrendingRecipes"
 
 const Home= () => {
   return (
     <>
       <SearchBar />
       <RecipeCard />
-      <Carousel />
+      <TrendingRecipes />
     </>
   )
 }

@@ -1,6 +1,7 @@
 // CSS styles for this component can be found in globals.scss page
 import {GiHamburgerMenu} from "react-icons/gi"
 import { useState } from "react"
+import Link from "next/link";
 
 const NavBar = () => {
 
@@ -22,14 +23,40 @@ const NavBar = () => {
 
   return (
     <nav className="nav">
-      <span className="logo"> Banquet App</span>
+
+      <span className="logo">
+        <Link href="/">
+          <a> Banquet App </a>
+        </Link>
+      </span>
+
+
       <span className={responsiveDesign}>
-        <a href="#">Breakfast</a>
-        <a href="#">Dessert</a>
-        <a href="#">Vegetarian</a>
-        <a href="#">Seafood</a>
-        <a href="#">Pasta</a>
-        <button className="button">Get a random recipe</button>
+
+        <Link href='/category/breakfast'>
+          <a>Breakfast</a>
+        </Link>
+
+        <Link href='/category/dessert'>
+          <a>Dessert</a>
+        </Link>
+
+        <Link href='/category/vegetarian'>
+          <a>Vegetarian</a>
+        </Link>
+
+        <Link href='/category/seafood'>
+          <a>Seafood</a>
+        </Link>
+
+        <Link href='/category/pasta'>
+          <a>Pasta</a>
+        </Link>
+
+        <Link href='/details/random'>
+          <button className="button">Get a random recipe</button>
+        </Link>
+
       </span>
       <GiHamburgerMenu className="icon" onClick={handleMenu} />
     </nav>

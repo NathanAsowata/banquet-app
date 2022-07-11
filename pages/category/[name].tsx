@@ -1,9 +1,9 @@
-import styles from "../styles/search.module.scss"
-import SearchBar from '../components/SearchBar'
-import SearchResult from "../components/SearchResult"
+import styles from "../../styles/search.module.scss"
 import Head from "next/head"
+import SearchBar from "../../components/SearchBar"
+import SearchResult from "../../components/SearchResult"
 
-const category = () => {
+const categoryPage = () => {
   return (
     <>
         <Head>
@@ -17,4 +17,4 @@ const category = () => {
   )
 }
 
-export default category
+export default categoryPage

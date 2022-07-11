@@ -29,6 +29,10 @@ body {
     font-family: 'Pacifico', cursive;
     color: $primary-color;
     margin-left: 10px;
+    a{
+      color: $primary-color;
+      text-decoration: none;
+    }
 }
 
 .menu a{

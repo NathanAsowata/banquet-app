@@ -1,7 +1,7 @@
-import styles from "../styles/details.module.scss"
+import styles from "../../styles/details.module.scss"
 import Head from 'next/head'
 import Image from 'next/image'
-import rice from "../public/rice.png"
+import rice from "../../public/rice.png"
 
 
 const details = () => {

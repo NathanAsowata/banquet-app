@@ -1,6 +1,7 @@
 import styles from "../styles/TrendingRecipes.module.scss"
 import RecipeCard from "./RecipeCard"
 
+
 const TrendingRecipes = () => {
   return (
     <div className={styles.container}>

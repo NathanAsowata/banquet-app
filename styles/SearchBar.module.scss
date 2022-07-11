@@ -1,29 +1,32 @@
 $primary-color: #ff4500;
 
-.form {
+.form{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
+    flex-direction: column;
 }
 .input{
     border: none;
+    padding: 10px;
+    margin-bottom: 5px;
     outline: none;
-    box-shadow: 2px 2px 5px grey;
-    height: 50px;
+    width: 350px;
     font-size: 18px;
-    width: 800px;
 }
 .button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: none;
-    outline: none;
-    background-color: $primary-color;
+    padding: 10px;
+    margin-bottom: 5px;
     color: white;
-    width: 120px;
-    font-size: 22px;
-    box-shadow: 2px 2px 5px grey;
-    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: $primary-color;
+}
+@media screen and (min-width: 600px) {
+    .form{
+        display: flex;
+        flex-direction: row;
+    }
+    .input{
+    min-width: 500px;
+    }
 }

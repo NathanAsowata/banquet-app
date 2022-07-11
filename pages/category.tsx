@@ -3,12 +3,12 @@ import SearchBar from '../components/SearchBar'
 import SearchResult from "../components/SearchResult"
 import Head from "next/head"
 
-const search = () => {
+const category = () => {
   return (
     <>
-      <Head>
-        <title>Search</title>
-      </Head>
+        <Head>
+            <title>Categories</title>
+        </Head>
         <header className={styles.search}>
             <SearchBar />
         </header>
@@ -17,4 +17,4 @@ const search = () => {
   )
 }
 
-export default search
+export default category

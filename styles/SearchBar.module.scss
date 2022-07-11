@@ -7,19 +7,22 @@ $primary-color: #ff4500;
 .input{
     border: none;
     padding: 10px;
-    margin-bottom: 5px;
+    margin: 5px 0px;
     outline: none;
     width: 350px;
     font-size: 18px;
+    box-shadow: 2px 2px 5px grey;
 }
 .button{
     border: none;
     padding: 10px;
-    margin-bottom: 5px;
+    margin: 5px 0px;
+    width: 350px;
     color: white;
     font-size: 18px;
     font-weight: 600;
     background-color: $primary-color;
+    box-shadow: 2px 2px 5px grey;
 }
 @media screen and (min-width: 600px) {
     .form{
@@ -28,5 +31,8 @@ $primary-color: #ff4500;
     }
     .input{
     min-width: 500px;
+    }
+    .button{
+        max-width: 150px;
     }
 }

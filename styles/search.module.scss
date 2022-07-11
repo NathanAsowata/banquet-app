@@ -1,0 +1,9 @@
+.search{
+    margin: 20px;
+}
+@media screen and (min-width: 500px) {
+    .search{
+        display: grid;
+        justify-content: center;
+    }
+}

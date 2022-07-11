@@ -1,0 +1,30 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.recipeDetails{
+    padding: 80px;
+    p{
+        margin: 10px 2px;
+    }
+    button{
+        background-color: #ff4500;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        box-shadow: 2px 2px 5px grey;
+    }
+}
+.image{
+    height: 400px;
+}
+.body{
+    margin-left: 20px;
+}
+.subheading{
+    margin-top: 25px;
+}
+.list{
+    list-style-type: none;
+}

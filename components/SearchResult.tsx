@@ -4,10 +4,7 @@ import RecipeCard from './RecipeCard'
 const SearchResult = () => {
   return (
     <section className={styles.container}>
-        <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard />
-        <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard />
-        <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard />
-        <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard /> <RecipeCard />
+        <p>Search results come here</p>
     </section>
   )
 }

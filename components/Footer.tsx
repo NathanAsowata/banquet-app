@@ -18,30 +18,30 @@ const Footer = () => {
                 Designed and built by <Link href={`http://www.nathanasowata.com/`}>
                     <a target="_blank"> Nathan Asowata</a></Link>
             </p>
-            <BsLinkedin className={styles.icon} />
-            <BsGithub className={styles.icon} />
-            <BsTwitter className={styles.icon} />
+            <Link href="#"><BsLinkedin className={styles.icon} /></Link>
+            <Link href="https://www.github.com/NathanAsowata/"><BsGithub className={styles.icon} /></Link>
+            <Link href="https://www.twitter.com/Nathan_Asowata/"><BsTwitter className={styles.icon} /></Link>
         </section>
         <section className={styles.section} >
             <h2 className={styles.heading}>Major Categories</h2>
             <ul>
-                <li>Breakfast</li>
-                <li>Dessert</li>
-                <li>Vegetarian</li>
-                <li>Seafood</li>
-                <li>Pasta</li>
-                <li>Miscellanous</li>
+                <li><Link href="/category/breakfast"> Breakfast </Link></li>
+                <li><Link href="/category/dessert">Dessert</Link></li>
+                <li><Link href="/category/vegetarian">Vegetarian</Link></li>
+                <li><Link href="/category/seafood">Seafood</Link></li>
+                <li><Link href="/category/pasta">Pasta</Link></li>
+                <li><Link href="/category/miscellanous">Miscellanous</Link></li>
             </ul>
         </section>
         <section className={styles.section} >
             <h2 className={styles.heading}>Other Categories</h2>
             <ul>
-                <li>Beef</li>
-                <li>Chicken</li>
-                <li>Pork</li>
-                <li>Lamb</li>
-                <li>Starter</li>
-                <li>Side</li>
+                <li><Link href="/category/beef">Beef</Link></li>
+                <li><Link href="/category/chicken">Chicken</Link></li>
+                <li><Link href="/category/pork">Pork</Link></li>
+                <li><Link href="/category/lamb">Lamb</Link></li>
+                <li><Link href="/category/starter">Starter</Link></li>
+                <li><Link href="/category/side">Side</Link></li>
             </ul>
         </section>
     </footer>

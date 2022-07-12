@@ -48,7 +48,6 @@ const NavBar = () => {
         <Link href='/category/seafood'>
           <a>Seafood</a>
         </Link>
-
         <Link href='/category/pasta'>
           <a>Pasta</a>
         </Link>

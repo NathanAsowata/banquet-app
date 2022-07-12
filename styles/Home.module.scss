@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    margin-bottom: 60px;
 }
 .title{
     text-align: center;
@@ -24,8 +25,16 @@
     margin: 5px 0px;
 }
 .category{
-    margin: 50px 4px 4px 150px;
+    text-align: center;
+    margin: 20px;
 }
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
 @media screen and (max-width: 500px) {
     .text{
         display: none;

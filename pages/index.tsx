@@ -1,9 +1,20 @@
 import Head from "next/head"
+import RecipeCard from "../components/RecipeCard"
 import SearchBar from "../components/SearchBar"
-import TrendingRecipes from "../components/TrendingRecipes"
 import styles from "../styles/Home.module.scss"
 
-const Home= () => {
+interface propTypes {
+  recipes:{
+    meals:{
+    strMeal: string,
+    strMealThumb: string,
+    idMeal: string
+  }[]
+  }
+}
+
+const Home= ({recipes}:propTypes) => {
+
   return (
     <>
     <Head>
@@ -15,22 +26,31 @@ const Home= () => {
         or just trying to figure out what to cook for dinner, our app has got you covered</p>
       <SearchBar />
     </header>
-      <h2 className={styles.category}>Breakfast Recipes</h2>
-      <TrendingRecipes />
-
-      <h2 className={styles.category}>Dessert Recipes</h2>
-      <TrendingRecipes />
-
-      <h2 className={styles.category}>Vegetarian Recipes</h2>
-      <TrendingRecipes />
-
-      <h2 className={styles.category}>Seafood Recipes</h2>
-      <TrendingRecipes />
-
-      <h2 className={styles.category}>Pasta Recipes</h2>
-      <TrendingRecipes />
+      <h2 className={styles.category}>Popular recipes</h2>
+      <section className={styles.content}>
+      {recipes.meals.map(meal => {
+        return (
+          <RecipeCard key={meal.idMeal} meal={meal.strMeal} 
+              thumbNail={meal.strMealThumb} id={meal.idMeal} 
+          />
+        )
+      })}
+      </section>
     </>
   )
+}
+
+
+export const getServerSideProps = async () => {
+  const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=canadian`)
+  const recipes = await res.json();
+  
+
+  return {
+    props: {
+      recipes
+    }
+  }
 }
 
 export default Home

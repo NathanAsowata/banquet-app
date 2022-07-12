@@ -5,6 +5,9 @@
     padding: 20px;
     ul{
         list-style-type: none;
+        a{
+            text-decoration: none;
+        }
         li:hover{
             text-decoration: underline;
             cursor: pointer;

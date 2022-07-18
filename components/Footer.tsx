@@ -18,9 +18,15 @@ const Footer = () => {
                 Designed and built by <Link href={`http://www.nathanasowata.com/`}>
                     <a target="_blank"> Nathan Asowata</a></Link>
             </p>
-            <Link href="#"><BsLinkedin className={styles.icon} /></Link>
-            <Link href="https://www.github.com/NathanAsowata/"><BsGithub className={styles.icon} /></Link>
-            <Link href="https://www.twitter.com/Nathan_Asowata/"><BsTwitter className={styles.icon} /></Link>
+            <Link href="https://www.linkedin.com/in/nathan-asowata-706624193/">
+                <a><BsLinkedin className={styles.icon} /></a>
+            </Link>
+            <Link href="https://www.github.com/NathanAsowata/">
+                <a><BsGithub className={styles.icon} /></a>
+            </Link>
+            <Link href="https://www.twitter.com/Nathan_Asowata/">
+                <a><BsTwitter className={styles.icon} /></a>
+            </Link>
         </section>
         <section className={styles.section} >
             <h2 className={styles.heading}>Major Categories</h2>

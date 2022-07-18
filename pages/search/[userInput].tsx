@@ -2,6 +2,7 @@ import styles from "../../styles/search.module.scss"
 import SearchBar from '../../components/SearchBar'
 import Head from "next/head"
 import Recipe from "../../components/Recipe"
+import { useRouter } from "next/router"
 
 interface propTypes {
   results: {
@@ -18,10 +19,13 @@ interface propTypes {
 
 const Search = ({results}: propTypes) => {
   
+  const router = useRouter()
+  const searchItem = router.query.userInput
+
   return (
     <>
       <Head>
-        <title>Search</title>
+        <title>{searchItem} - Search</title>
       </Head>
         <header className={styles.search}>
             <SearchBar />

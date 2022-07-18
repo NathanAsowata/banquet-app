@@ -1,5 +1,7 @@
 import styles from "../styles/Recipe.module.scss"
 import Image from "next/image"
+import { useRouter } from "next/router"
+import { FormEvent } from "react"
 
 interface propTypes {
     mealDetails:{
@@ -12,8 +14,15 @@ interface propTypes {
   }
 
 const Recipe = ({mealDetails}:propTypes) => {
+
+    const router = useRouter()
+    const showDetails = (event: FormEvent) => {
+        event.preventDefault()
+        router.push(`/details/${mealDetails.idMeal}`)
+    }
+
   return (
-    <div key={mealDetails.idMeal} className={styles.container}>
+    <div key={mealDetails.idMeal} className={styles.container} onClick={showDetails}>
                         <Image 
                         src={mealDetails.strMealThumb} 
                         alt={mealDetails.strMeal} 

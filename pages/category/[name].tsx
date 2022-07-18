@@ -1,9 +1,19 @@
 import styles from "../../styles/search.module.scss"
 import Head from "next/head"
 import SearchBar from "../../components/SearchBar"
-import SearchResult from "../../components/SearchResult"
+import Recipe from "../../components/Recipe"
 
-const categoryPage = () => {
+interface propTypes {
+  data: {
+    meals: {
+      strMeal: string,
+      strMealThumb: string,
+      idMeal: string
+    }[]
+  }
+} 
+
+const CategoryPage = ({data}:propTypes) => {
   return (
     <>
         <Head>
@@ -12,9 +22,25 @@ const categoryPage = () => {
         <header className={styles.search}>
             <SearchBar />
         </header>
-        <SearchResult />
+        <main className={styles.searchResult}>
+          {data.meals.map(meal => {
+            return <Recipe key={meal.idMeal} mealDetails={meal} />
+          })}
+        </main>
     </>
   )
 }
 
-export default categoryPage
+export const getServerSideProps = async (context: any) => {
+    const category = context.query.name
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+    const data = await res.json()
+    console.log(data);
+     return{
+      props:{
+        data
+      }
+     }
+}
+
+export default CategoryPage

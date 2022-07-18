@@ -7,9 +7,9 @@ interface propTypes {
     mealDetails:{
         idMeal: string,
         strMeal: string,
-        strCategory: string,
         strMealThumb: string,
-        strArea: string
+        strCategory?: string,
+        strArea?: string
     }
   }
 

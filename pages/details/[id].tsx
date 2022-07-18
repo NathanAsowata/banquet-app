@@ -2,48 +2,131 @@ import styles from "../../styles/details.module.scss"
 import Head from 'next/head'
 import Image from 'next/image'
 import rice from "../../public/rice.png"
+import Link from "next/link"
 
 
-const details = () => {
+interface propTypes {
+    meals: {
+      strMeal: string,
+      strCategory: string,
+      strArea: string,
+      strInstructions: string,
+      strMealThumb: string,
+      strYoutube: string,
+      strIngredient1: string,
+      strIngredient2: string,
+      strIngredient3: string,
+      strIngredient4: string,
+      strIngredient5: string,
+      strIngredient6: string,
+      strIngredient7: string,
+      strIngredient8: string,
+      strIngredient9: string,
+      strIngredient10: string,
+      strIngredient11: string,
+      strIngredient12: string,
+      strIngredient13: string,
+      strIngredient14: string,
+      strIngredient15: string,
+      strIngredient16: string,
+      strIngredient17: string,
+      strIngredient18: string,
+      strIngredient19: string,
+      strIngredient20: string,
+      strMeasure1: string,
+      strMeasure2: string,
+      strMeasure3: string,
+      strMeasure4: string,
+      strMeasure5: string,
+      strMeasure6: string,
+      strMeasure7: string,
+      strMeasure8: string,
+      strMeasure9: string,
+      strMeasure10: string,
+      strMeasure11: string,
+      strMeasure12: string,
+      strMeasure13: string,
+      strMeasure14: string,
+      strMeasure15: string,
+      strMeasure16: string,
+      strMeasure17: string,
+      strMeasure18: string,
+      strMeasure19: string,
+      strMeasure20: string,
+      strSource: string
+    }[]
+}
+
+const Details = ({meals}: propTypes) => {
+
+
   return (
     <>
     <Head>
         <title>Recipe Details</title>
     </Head>
-    <div className={styles.header}>
-        <section className={styles.recipeDetails}>
-            <h1>Japanese Gohan Rice</h1>
-            <p>Japanese food</p>
-            <button>Watch on Youtube</button>
-        </section>
-        <Image src={rice} alt={`Japanese Gohan rice`} className={styles.image} />
-    </div>
+    {meals.map(meal => {
+      return(
+        <main key={meal.strMeal}>
+        <div className={styles.header}>
+          <section className={styles.recipeDetails}>
+              <h1>{meal.strMeal}</h1>
+              <p>{meal.strArea} Food</p>
+              <Link href={meal.strYoutube}>
+                <a target={"_blank"}>
+                <button>Watch on Youtube</button>
+                </a>
+              </Link>
+          </section>
+          <Image src={meal.strMealThumb} alt={meal.strMeal} width={500} height={500} />
+      </div>
 
-    <section className={styles.body}>
-    <h2 className={styles.subheading}>Ingredients</h2>
-    <ul className={styles.list}>
-        <li><strong> Sushi Rice </strong> - 300g</li>
-        <li><strong> Mirin </strong> - 1tbs</li>
-        <li><strong> Pickle Juice </strong> - Garnish</li>
-        <li><strong> Spring Onions </strong> - Garnish</li>
-    </ul>
-    
-    <h2 className={styles.subheading}>Instructions</h2>
-    <p>
-    STEP 1: Rinsing and soaking your rice is key to achieving the perfect texture. 
-    Measure the rice into a bowl, cover with cold water, then use your fingers to 
-    massage the grains of rice – the water will become cloudy. Drain and rinse 
-    again with fresh water. Repeat five more times until the water stays clear.
-    <br />
-    STEP 2: Tip the rinsed rice into a saucepan with 400ml water, or 200ml dashi and 
-    200ml water, bring to the boil, then turn down the heat to a low simmer, cover 
-    with a tight-fitting lid with a steam hole and cook for 15 mins. Remove from the 
-    heat and leave to sit for another 15 mins, then stir through the mirin. Remove the 
-    lid and give it a good stir. Serve with any or all of the optional toppings.
-    </p>
-    </section>
+      <section className={styles.body}>
+      <h2 className={styles.subheading}>Ingredients</h2>
+      <ul className={styles.list}>
+          <li><strong> {meal.strIngredient1} </strong> - {meal.strMeasure1}</li>
+          <li><strong> {meal.strIngredient2} </strong> - {meal.strMeasure2}</li>
+          <li><strong> {meal.strIngredient3} </strong> - {meal.strMeasure3}</li>
+          <li><strong> {meal.strIngredient4} </strong> - {meal.strMeasure4}</li>
+          <li><strong> {meal.strIngredient5} </strong> - {meal.strMeasure5}</li>
+          <li><strong> {meal.strIngredient6} </strong> - {meal.strMeasure6}</li>
+          <li><strong> {meal.strIngredient7} </strong> - {meal.strMeasure7}</li>
+          <li><strong> {meal.strIngredient8} </strong> - {meal.strMeasure8}</li>
+          <li><strong> {meal.strIngredient9} </strong> - {meal.strMeasure9}</li>
+          <li><strong> {meal.strIngredient10} </strong> - {meal.strMeasure10}</li>
+          <li><strong> {meal.strIngredient11} </strong> - {meal.strMeasure11}</li>
+          <li><strong> {meal.strIngredient12} </strong> - {meal.strMeasure12}</li>
+          <li><strong> {meal.strIngredient13} </strong> - {meal.strMeasure13}</li>
+          <li><strong> {meal.strIngredient14} </strong> - {meal.strMeasure14}</li>
+          <li><strong> {meal.strIngredient15} </strong> - {meal.strMeasure15}</li>
+          <li><strong> {meal.strIngredient16} </strong> - {meal.strMeasure16}</li>
+          <li><strong> {meal.strIngredient17} </strong> - {meal.strMeasure17}</li>
+          <li><strong> {meal.strIngredient18} </strong> - {meal.strMeasure18}</li>
+          <li><strong> {meal.strIngredient19} </strong> - {meal.strMeasure19}</li>
+          <li><strong> {meal.strIngredient20} </strong> - {meal.strMeasure20}</li>
+      </ul>
+      
+      <h2 className={styles.subheading}>Instructions</h2>
+      <p className={styles.Instructions}>{meal.strInstructions}</p>
+      </section>
+    </main>
+      )
+    }) }
     </>
   )
 }
 
-export default details
+export const getServerSideProps = async (context: any) => {
+    const foodId = context.query.id
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
+    const details = await res.json()
+    console.log(details.meals);
+    
+    return{
+      props: {
+        meals: details.meals
+      }
+    }
+}
+
+export default Details

@@ -35,7 +35,6 @@ export const getServerSideProps = async (context: any) => {
     const category = context.query.name
     const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     const data = await res.json()
-    console.log(data);
      return{
       props:{
         data

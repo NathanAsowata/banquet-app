@@ -1,7 +1,7 @@
 import styles from "../../styles/search.module.scss"
 import SearchBar from '../../components/SearchBar'
 import Head from "next/head"
-import Image from "next/image"
+import Recipe from "../../components/Recipe"
 
 interface propTypes {
   results: {
@@ -9,8 +9,8 @@ interface propTypes {
       idMeal: string,
       strMeal: string,
       strCategory: string,
-      strMealThumb: string
-
+      strMealThumb: string,
+      strArea: string
     }[]
   }
 }
@@ -35,17 +35,7 @@ const Search = ({results}: propTypes) => {
               <h1 className={styles.error}>No result for your search! Please try another search</h1> : 
               results.meals.map(meal => {
                 return(
-                  <div key={meal.idMeal} className={styles.recipeCard}> 
-                    <Image 
-                      src={meal.strMealThumb} 
-                      alt={meal.strMeal} 
-                      width={200} 
-                      height={200} 
-                      layout="responsive" 
-                    />
-                      <h1>{meal.strMeal}</h1>
-                      <p>{meal.strCategory}</p>
-                  </div>
+                  <Recipe mealDetails={meal} key={meal.idMeal} />
                 )
               })
           }

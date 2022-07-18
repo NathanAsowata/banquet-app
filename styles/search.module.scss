@@ -12,12 +12,9 @@
     font-weight: 400;
     margin: 25px;
 }
-.recipeCard{
-    width: 200px;
-    height: fit-content;
-    box-shadow: 3px 3px 6px grey;
-    margin: 15px;
-    h1, p{
-        padding: 5px;
-    }
+.searchResult{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 20px;
 }

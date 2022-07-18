@@ -1,8 +1,10 @@
 import { ChangeEvent, useState } from "react";
 import styles from "../styles/SearchBar.module.scss"
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 const SearchBar = () => {
+
+  const router = useRouter()
 
   const [userInput, setUserInput] = useState("");
 
@@ -14,6 +16,9 @@ const SearchBar = () => {
       if (userInput === "") {
         event.preventDefault();
         alert("Type your search")
+      }else {
+        event.preventDefault()
+        router.push(`/search/${userInput}`)
       }
   }
 
@@ -25,9 +30,7 @@ const SearchBar = () => {
           onChange={(e) => handleUserInput(e)}
           required
         />
-        <Link href={`/search/${userInput}`}>
-          <button type="submit" className={styles.button} onClick={handleSearch}> Search</button>
-        </Link>
+          <button type="submit" className={styles.button} onClick={(event) => handleSearch(event)}> Search</button>
     </form>
   )
 }

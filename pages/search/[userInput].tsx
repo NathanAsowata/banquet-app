@@ -17,9 +17,6 @@ interface propTypes {
 
 
 const Search = ({results}: propTypes) => {
-
-  console.log(results.meals);
-  
   
   return (
     <>
@@ -29,7 +26,7 @@ const Search = ({results}: propTypes) => {
         <header className={styles.search}>
             <SearchBar />
         </header>
-        <section>
+        <section className={styles.searchResult}>
           {
             results.meals === null ? 
               <h1 className={styles.error}>No result for your search! Please try another search</h1> : 
@@ -49,7 +46,6 @@ export const getServerSideProps = async (context: any) => {
 
     const res = await fetch(`http://www.themealdb.com/api/json/v1/1/search.php?s=${searchRequest}`)
     const results = await res.json()
-    console.log(results);
     
     
 

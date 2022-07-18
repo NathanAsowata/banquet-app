@@ -118,15 +118,29 @@ const Details = ({meals}: propTypes) => {
 
 export const getServerSideProps = async (context: any) => {
     const foodId = context.query.id
-    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
-    const details = await res.json()
-    console.log(details.meals);
-    
-    return{
-      props: {
-        meals: details.meals
+
+    if (foodId === "random") {
+      const res = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      const details = await res.json()
+
+      return{
+        props: {
+          meals: details.meals
+        }
       }
+
+    } else{
+      const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
+      const details = await res.json()
+
+      return{
+        props: {
+          meals: details.meals
+        }
+      }
+      
     }
+    
 }
 
 export default Details

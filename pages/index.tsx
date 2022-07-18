@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Recipe from "../components/Recipe"
 import RecipeCard from "../components/RecipeCard"
 import SearchBar from "../components/SearchBar"
 import styles from "../styles/Home.module.scss"
@@ -30,9 +31,7 @@ const Home= ({recipes}:propTypes) => {
       <section className={styles.content}>
       {recipes.meals.map(meal => {
         return (
-          <RecipeCard key={meal.idMeal} meal={meal.strMeal} 
-              thumbNail={meal.strMealThumb} id={meal.idMeal} 
-          />
+          <Recipe key={meal.idMeal} mealDetails={meal} />
         )
       })}
       </section>
@@ -42,7 +41,7 @@ const Home= ({recipes}:propTypes) => {
 
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=canadian`)
+  const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=american`)
   const recipes = await res.json();
   
 

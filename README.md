@@ -1,13 +1,25 @@
-## How I worked on this project
-My goal was to demonstrate my data fetching ability.
+## Purpose of this project
+My goal for this project is to demonstrate my React development skills.
 
-* I built this app with data from TheMealDB.com API
-* I used NextJS because it is server rendered thus adequately suited for hiding api keys from the client side
+## How I built this project
+* I used a UI design I created on [Figma](https://www.figma.com/file/5895yc0eBRnEHSWlnovMcq/Banquet-App?node-id=0%3A1)
+* I used data provided by [The MealDB.com](https://www.themealdb.com/api.php)
+* I used NextJS because it is server rendered making well suited for hiding api keys from the client side
 
-## 
+## Why I built this project this way
+* Using CSS modules helps me avoid namespace collision for CSS classes.
+* My plan is to work professionally as a frontend developer and I realised that the ability to fetch data from a REST API is an important skill for frontend developers. That is why I used data from an existing API in this project.
+
+## The tools I used in this project
+* Figma
+* React
+* TypeScript
+* Sass
+* NextJS
+* React Icons
+
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash

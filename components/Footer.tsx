@@ -36,7 +36,7 @@ const Footer = () => {
                 <li><Link href="/category/vegetarian">Vegetarian</Link></li>
                 <li><Link href="/category/seafood">Seafood</Link></li>
                 <li><Link href="/category/pasta">Pasta</Link></li>
-                <li><Link href="/category/miscellanous">Miscellanous</Link></li>
+                <li><Link href="/category/miscellaneous">Miscellaneous</Link></li>
             </ul>
         </section>
         <section className={styles.section} >

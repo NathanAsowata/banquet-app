@@ -18,7 +18,7 @@ const Footer = () => {
                 Designed and built by <Link href={`http://www.nathanasowata.com/`}>
                     <a target="_blank"> Nathan Asowata</a></Link>
             </p>
-            <Link href="https://www.linkedin.com/in/nathan-asowata-706624193/">
+            <Link href="https://www.linkedin.com/in/NathanAsowata/">
                 <a><BsLinkedin className={styles.icon} /></a>
             </Link>
             <Link href="https://www.github.com/NathanAsowata/">

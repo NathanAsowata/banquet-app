@@ -12,12 +12,12 @@ My goal was to build a web app that requires data from an external REST API
 
 ## Why I built this project this way
 * I used NextJS for this project because it allows me to fetch data from an external API on the server side rather than on the client side thus making it safe for production.
-* I used Sass to style this project because it is processed server side thus making it faster than vanilla CSS.
+* I used Sass to style this project because it offers nesting which helps to keep things organised.
 * Using CSS modules helps me avoid namespace collision for CSS classes.
 * My plan is to work professionally as a frontend developer and I realised that the ability to fetch data from a REST API is an important skill for frontend developers. That is why I used data from an existing API in this project.
 
 ## If I had more time I would change this
-* I would add end to end tests with Cypress.
+* I would add end-to-end tests with Cypress.
 
 
 ## Available Scripts

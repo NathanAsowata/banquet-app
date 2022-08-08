@@ -4,9 +4,11 @@ My goal was to build a web app that requires data from an external REST API
 * I used the REST API provided by [TheMealDB.com](https://www.themealdb.com/api.php)
 
 ## How to navigate this project
-* I used a UI design I created on [Figma](https://www.figma.com/file/5895yc0eBRnEHSWlnovMcq/Banquet-App?node-id=0%3A1)
-* I used data provided by [The MealDB.com](https://www.themealdb.com/api.php)
-* I used NextJS because it is server rendered making well suited for hiding api keys from the client side
+* `components` folder contains code for each component.
+* `pages` folder contains the TypeScript code for each page.
+* `public` folder contains images I used in this project.
+* `styles` folder contains the Sass styles for each page and component.
+* `tests` folder contains all the tests i wrote for this project.  
 
 ## Why I built this project this way
 * Using CSS modules helps me avoid namespace collision for CSS classes.

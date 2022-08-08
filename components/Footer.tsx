@@ -4,7 +4,7 @@ import styles from "../styles/Footer.module.scss"
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-testid="footer">
         <section className={styles.section} >
             <h2 className={styles.heading} >About this project</h2>
             <p className={styles.text} >Banquet is a culinary app that helps you find recipes for any kind of meal.

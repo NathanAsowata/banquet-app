@@ -32,7 +32,7 @@ const Home= ({recipes}:propTypes) => {
           {recipes.meals.map(meal => {
             return (
               <Recipe key={meal.idMeal} mealDetails={meal} />
-            )
+            ) 
           })}
         </section>
     </>

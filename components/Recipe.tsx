@@ -22,7 +22,7 @@ const Recipe = ({mealDetails}:propTypes) => {
     }
 
   return (
-    <div key={mealDetails.idMeal} className={styles.container} onClick={showDetails}>
+    <div key={mealDetails.idMeal} className={styles.container} onClick={showDetails} data-testid="recipes">
                         <Image 
                         src={mealDetails.strMealThumb} 
                         alt={mealDetails.strMeal} 

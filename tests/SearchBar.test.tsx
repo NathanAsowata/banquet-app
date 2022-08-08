@@ -1,7 +1,7 @@
 import SearchBar from "../components/SearchBar";
 import {fireEvent, render, screen } from "@testing-library/react"
 
-describe("Navigation Bar Test", () => {
+describe("Search Bar Test", () => {
     it("should display search bar", () => {
         const Search = render(<SearchBar />)
         const inputElement = screen.getByRole("textbox")

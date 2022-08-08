@@ -1,6 +1,6 @@
 ## How I worked on this project
-My goal waas to build a web app that requires data from an external REST API
-* I built this app based on I designs I created on Figma: [Link to the Figma design](https://www.figma.com/file/5895yc0eBRnEHSWlnovMcq/Banquet-App?node-id=0%3A1)
+My goal was to build a web app that requires data from an external REST API
+* I built this app based on designs I created on Figma: [Link to the Figma design](https://www.figma.com/file/5895yc0eBRnEHSWlnovMcq/Banquet-App?node-id=0%3A1)
 * I used the REST API provided by [TheMealDB.com](https://www.themealdb.com/api.php)
 
 ## How to navigate this project

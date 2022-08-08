@@ -1,6 +1,5 @@
 import Head from "next/head"
 import Recipe from "../components/Recipe"
-import RecipeCard from "../components/RecipeCard"
 import SearchBar from "../components/SearchBar"
 import styles from "../styles/Home.module.scss"
 
